@@ -16,6 +16,7 @@ function GenerateNumber() {
             numeroAleatorio = Math.floor(Math.random() * (max - min + 1) + min);
         } while (numeros.includes(numeroAleatorio));
         numeros.push(numeroAleatorio);
+
     }
 
     // Data e hora
@@ -42,4 +43,6 @@ ${numeros.map(num => `<span class="numero">${num}</span>`).join(" - ")}
 function novoSorteio() {
     document.getElementById("resultado").style.display = "none";
     document.getElementById("inputs").style.display = "block";
+
+    console.log ("Novo sorteio iniciado.")
 }
